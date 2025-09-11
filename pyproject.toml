@@ -1,0 +1,6 @@
+[project]
+name = "RNNTrialStructures"
+version = "0.1.0"
+authors = [{name="Roger Herikstad", email="rherikstad@proton.me"}]
+description = "Python wrapper for the julia packcage RNNTrialStructures"
+

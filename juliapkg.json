@@ -1,0 +1,10 @@
+{
+	"julia": "1.11",
+	"packages": {
+		"RNNTrialStructures": {
+			"uuid": "1c0943b8-e38f-498f-b6a0-1f910535fd85",
+			"url": "https://github.com/grero/RNNTrialStructures.jl",
+			"version": "0.15"
+		}
+	}
+}
