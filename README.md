@@ -38,3 +38,6 @@ we'll use a binsize of 2 units for the floor of the arena, and 5 units for the w
 >>> batch_generator = RNNTrialStructures.get_batch_generator(trialstruct, 500,binsize=2.0, binsize_wall=5.0)
 >>> x,y,w = batch_generator()
 ```
+
+![Illustration of the default four pillar maze](assets/default_arena_layout.png)
+Layout of the default 4 pillar arena.
