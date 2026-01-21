@@ -13,8 +13,8 @@ def get_navigation_trialstruct(min_n_steps, max_n_steps, inputs, outputs):
 
     return trialstruct
 
-def get_batch_generator(trialstruct, ntrials,fov=jl.pi/3, head_direction_step=jl.pi/3, p_stay=1/3, p_hd=0.8,dt=20.0):
+def get_batch_generator(trialstruct, ntrials,fov=jl.pi/3, head_direction_step=jl.pi/3, p_stay=1/3, p_hd=0.8,dt=20.0, binsize=1.0, binsize_wall=binsize):
     ntrials = jl.convert(jl.Int64, ntrials)
-    trial_generator = jl.RNNTrialStructures.generate_trials(trialstruct, ntrials, dt, fov=fov,hd_step=head_direction_step, p_stay=p_stay, p_hd=p_hd) 
+    trial_generator = jl.RNNTrialStructures.generate_trials(trialstruct, ntrials, dt, fov=fov,hd_step=head_direction_step, p_stay=p_stay, p_hd=p_hd, binsize=binsize, binsize_wall=binsize_wall) 
     return trial_generator
 
