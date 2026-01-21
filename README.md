@@ -28,3 +28,13 @@ import numpy as np
 q = np.multiply(w, y).sum(1)
 ```
 would only include valid time steps.
+
+We can also create a trial structure where the output is the conjunction of position and gaze. To reduce the dimensionality of the conjunction output,
+we'll use a binsize of 2 units for the floor of the arena, and 5 units for the walls. This will result in a conjunction dimension of 504.
+
+```python
+>>> import RNNTrialStructures
+>>> trialstruct = RNNTrialStructures.get_navigation_trialstruct(20,50, ["distance","movement","texture"],["conjunction"])
+>>> batch_generator = RNNTrialStructures.get_batch_generator(trialstruct, 500,binsize=2.0, binsize_wall=5.0)
+>>> x,y,w = batch_generator()
+```
