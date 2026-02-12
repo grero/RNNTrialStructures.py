@@ -8,7 +8,12 @@ conda activate trialstructs
 conda install pip
 pip install git+https://github.com/grero/RNNTrialStructures.py.git 
 ```
+Note: Because of a change in how juliaup installs julia on macOS, you will get an error in the last line. A temporary fix is to create a symlink in the directory of the julia installation so that pyjuliapkg can find the julia executable. For instance,
 
+```bash
+cd $HOME/.julia/juliaup/julia-1.11.9+0.aarch64.apple.darwin14
+ln -sf Julia-1.11.app/Contents/Resources/julia/bin .
+```
 
 # Usage
 
